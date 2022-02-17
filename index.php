@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Enregistrer les prenoms de nouveaux membres </title>
