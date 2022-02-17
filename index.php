@@ -44,15 +44,15 @@ if(isset($_POST["Submit"])){
 
 		
 	$sql = "INSERT INTO tblMembers (fname) VALUES ('$fname')";
-	echo '<p align="center">Enregistré!<br>';
+echo '<p align="center">Enregistré!<br>';
 	
-	$sql = "SELECT * FROM tblMembers";
-	$result = $link->query($sql);
+	// $sql2 = "SELECT * FROM tblMembers";
+	// $result = $link->query($sql2);
 	
   	// output data of each row
-  	while($row = mysql_fetch_assoc($result)) {
-    	echo "Prénom: " . $row["fname"]. "<br>";
-  		}
+  // 	while($row = fetch_assoc($result)) {
+   //  	echo "Prénom: " . $row["fname"]. "<br>";
+  	// 	}
 
 
 
@@ -74,29 +74,12 @@ else{
        
   		<label for="fname">Prénom membre: </label>
   		<input type="text" id="fname" name="fname"><br><br> 
-  		<input type="submit" value="Submit">
-
+		<div style="text-align: center;"><input type="submit" value="Submit" value="envoyer"></div>
         </td>
     </tr>
 	
 
-	
-    <tr> 
-      <td class="c"> Commentaire / <br>
-        id&eacute;es activit&eacute;es:</td>
-      <td class="c"> 
-        <textarea name="comment" cols="65"></textarea>
-        <br>
-      </td>
-    </tr>
-    <tr> 
-      <td colspan="2" align="center"> <br>
-        <input type="submit" name="Submit" value="Envoyer vos r&eacute;ponses">
-        <br>
-        <br>
-        <br>
-      </td>
-    </tr>
+
   </table>
 </form>
 
