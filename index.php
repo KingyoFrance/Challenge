@@ -27,4 +27,28 @@
   </table>
 </form>
 
+ <?php
+$servername = "sql11.freemysqlhosting.net";
+$username = "sql11473567";
+$password = "XjUX4CL5zR";
+$dbname = "sql11473567";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO tblMembers (fname) VALUES ('$fname')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?> 	
+	
 </html>	
